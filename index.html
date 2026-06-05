@@ -1,21 +1,17 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoNews Magazine</title>
-
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="header">
   <div class="container navbar">
-
-    <a href="#" class="logo">
-      🌱 EcoNews
-    </a>
+    <a href="#" class="logo">🌱 EcoNews</a>
 
     <nav id="nav-menu" class="nav-menu">
       <a href="#">Início</a>
@@ -26,81 +22,77 @@
     </nav>
 
     <div class="nav-actions">
-
-      <button id="theme-toggle" class="theme-btn">
-        🌙
-      </button>
-
-      <button id="hamburger" class="hamburger">
-        ☰
-      </button>
-
+      <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema">🌙</button>
+      <button id="hamburger" class="hamburger" aria-label="Menu">☰</button>
     </div>
-
   </div>
 </header>
 
 <main>
-
+  <!-- HERO -->
   <section class="hero">
-
     <div class="hero-overlay">
-
-      <span class="badge">
-        DESTAQUE
-      </span>
-
-      <h1>
-        Biodiversidade: o patrimônio natural que sustenta a vida
-      </h1>
-
-      <p>
-        Descubra como a biodiversidade influencia diretamente
-        a qualidade de vida, a economia e o equilíbrio dos
-        ecossistemas em todo o planeta.
-      </p>
-
-      <a href="#" class="hero-btn">
-        Ler Matéria
-      </a>
-
+      <span class="badge">DESTAQUE</span>
+      <h1>Biodiversidade: o patrimônio natural que sustenta a vida</h1>
+      <p>Descubra como a variedade de vida no planeta influencia diretamente nossa economia, saúde e futuro.</p>
+      <a href="#" class="hero-btn">Ler Matéria Completa</a>
     </div>
-
   </section>
-
-  <section class="container section">
-
-    <div class="section-header">
-
-      <h2>Últimas Notícias</h2>
-
-      <input
-        type="text"
-        id="search"
-        placeholder="Pesquisar notícia..."
-      >
-
-    </div>
-
-    <div id="news-feed" class="news-grid">
-    </div>
-
-  </section>
-
-</main>
-
-<footer class="footer">
 
   <div class="container">
-    <p>
-      © 2026 EcoNews Magazine - Todos os direitos reservados.
-    </p>
-  </div>
+    <!-- CATEGORIAS / FILTROS -->
+    <section class="filters">
+      <button class="filter-btn active" data-category="all">Todos</button>
+      <button class="filter-btn" data-category="Biodiversidade">Biodiversidade</button>
+      <button class="filter-btn" data-category="Meio Ambiente">Meio Ambiente</button>
+      <button class="filter-btn" data-category="Sustentabilidade">Sustentabilidade</button>
+      <button class="filter-btn" data-category="Conservação">Conservação</button>
+    </section>
 
+    <!-- TRENDING -->
+    <section class="trending">
+      <h2 class="section-title">🔥 Em Alta</h2>
+      <div id="trending-feed" class="trending-grid"></div>
+    </section>
+
+    <!-- ÚLTIMAS NOTÍCIAS -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Últimas Notícias</h2>
+        <input type="text" id="search" placeholder="Pesquisar notícias...">
+      </div>
+      <div id="news-feed" class="news-grid"></div>
+    </section>
+  </div>
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <button id="close-modal" class="close-btn">&times;</button>
+    <img id="modal-image" src="" alt="">
+    <div class="modal-body">
+      <span id="modal-category" class="category"></span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="newsletter">
+      <h3>Fique por dentro das novidades</h3>
+      <div class="newsletter-form">
+        <input type="email" id="email" placeholder="Seu melhor e-mail">
+        <button onclick="subscribe()">Inscrever-se</button>
+      </div>
+    </div>
+    <p>© 2026 EcoNews Magazine • Todos os direitos reservados.</p>
+  </div>
+  <button id="back-to-top" class="back-to-top">↑</button>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
-```
