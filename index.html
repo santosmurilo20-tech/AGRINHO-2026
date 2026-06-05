@@ -1,62 +1,106 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoNews Magazine</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoNews Magazine</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="container nav-container">
-            <h1 class="logo">🌱 EcoNews</h1>
+<header class="header">
+  <div class="container navbar">
 
-            <nav id="nav-menu" class="nav">
-                <a href="#">Início</a>
-                <a href="#">Meio Ambiente</a>
-                <a href="#">Ciência</a>
-                <a href="#">Sustentabilidade</a>
-                <a href="#">Contato</a>
-            </nav>
+    <a href="#" class="logo">
+      🌱 EcoNews
+    </a>
 
-            <div class="actions">
-                <button id="theme-toggle">🌙</button>
+    <nav id="nav-menu" class="nav-menu">
+      <a href="#">Início</a>
+      <a href="#">Meio Ambiente</a>
+      <a href="#">Ciência</a>
+      <a href="#">Sustentabilidade</a>
+      <a href="#">Contato</a>
+    </nav>
 
-                <button id="hamburger" class="hamburger">
-                    ☰
-                </button>
-            </div>
-        </div>
-    </header>
+    <div class="nav-actions">
 
-    <main>
+      <button id="theme-toggle" class="theme-btn">
+        🌙
+      </button>
 
-        <section class="hero">
-            <div class="hero-content">
-                <span class="tag">DESTAQUE</span>
-                <h2>Biodiversidade: o patrimônio natural que sustenta a vida</h2>
-                <p>
-                    Entenda por que a biodiversidade é essencial para os
-                    ecossistemas, para a economia e para o futuro do planeta.
-                </p>
-            </div>
-        </section>
+      <button id="hamburger" class="hamburger">
+        ☰
+      </button>
 
-        <section class="container">
-            <h2 class="section-title">Últimas Notícias</h2>
+    </div>
 
-            <div id="news-feed" class="news-grid">
-                <!-- Renderizado via JavaScript -->
-            </div>
-        </section>
+  </div>
+</header>
 
-    </main>
+<main>
 
-    <footer>
-        <p>© 2026 EcoNews Magazine - Todos os direitos reservados.</p>
-    </footer>
+  <section class="hero">
 
-    <script src="script.js"></script>
+    <div class="hero-overlay">
+
+      <span class="badge">
+        DESTAQUE
+      </span>
+
+      <h1>
+        Biodiversidade: o patrimônio natural que sustenta a vida
+      </h1>
+
+      <p>
+        Descubra como a biodiversidade influencia diretamente
+        a qualidade de vida, a economia e o equilíbrio dos
+        ecossistemas em todo o planeta.
+      </p>
+
+      <a href="#" class="hero-btn">
+        Ler Matéria
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="container section">
+
+    <div class="section-header">
+
+      <h2>Últimas Notícias</h2>
+
+      <input
+        type="text"
+        id="search"
+        placeholder="Pesquisar notícia..."
+      >
+
+    </div>
+
+    <div id="news-feed" class="news-grid">
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="container">
+    <p>
+      © 2026 EcoNews Magazine - Todos os direitos reservados.
+    </p>
+  </div>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+```
